@@ -1,2 +1,17 @@
 # ubuntu-vscode-c-dev
-vagrant file for an ubuntu, vscode, C dev vm
+Vagrant file VirtualBox 6 - ubuntu, vscode, C development
+
+Includes git, buildessentials, vscode with c/cpp tools
+
+Requirements:
+- VirtualBox 6
+- Vagrant
+
+
+```
+vagrant up
+```
+
+- Username: vagrant
+- Password: vagrant
+
