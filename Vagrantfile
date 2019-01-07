@@ -73,6 +73,8 @@ config.vm.provision "shell", inline: <<-SHELL
    sudo apt install -y ./code.deb
    popd
    su vagrant -c "code --install-extension ms-vscode.cpptools"
-  #   apt-get install -y apache2
+   sudo apt install -y docker.io
+   sudo systemctl start docker
+   sudo systemctl enable docker
   SHELL
 end

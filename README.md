@@ -1,5 +1,5 @@
 # ubuntu-vscode-c-dev
-Vagrant file for GUI C/C++ dev IDE. Ubuntu 18.04, git, buildessentials, and vscode with c/cpp tools.
+Vagrant file for GUI C/C++ dev IDE. Ubuntu 18.04, git, buildessentials, vscode with c/cpp tools, and docker.
 
 Requirements:
 - VirtualBox 6
