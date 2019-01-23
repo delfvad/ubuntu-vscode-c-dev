@@ -66,13 +66,15 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
 config.vm.provision "shell", inline: <<-SHELL
    apt-get update
-   sudo apt install -y build-essential
+   sudo apt install -y build-essential libseccomp-dev libcap-dev libacl1-dev libcap-ng-utils util-linux
+   sudo apt install -y golang
    sudo apt install -y git
    pushd /tmp
-   wget https://go.microsoft.com/fwlink/?LinkID=760868 -O code.deb
+   wget https://update.code.visualstudio.com/1.30.2/linux-deb-x64/stable -O code.deb
    sudo apt install -y ./code.deb
    popd
    su vagrant -c "code --install-extension ms-vscode.cpptools"
+   su vagrant -c "code --install-extension ms-vscode.go"
    sudo apt install -y docker.io
    sudo systemctl start docker
    sudo systemctl enable docker
